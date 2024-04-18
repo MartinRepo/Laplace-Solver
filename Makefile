@@ -1,8 +1,8 @@
 # Compiler definitions
-GCC = gcc -std=c11
-ICC = icc -std=c11
-MPICC = mpicc -std=c11
-MPIICC = mpiicc -std=c11
+GCC = gcc -std=c99
+ICC = icc -std=c99
+MPICC = mpicc -std=c99
+MPIICC = mpiicc -std=c99
 
 # Common source files
 COMMON_SRC = heat.c file-reader.c
@@ -17,16 +17,16 @@ ICC_COMPLETE_EXE = heat-complete-icc
 all: gccserial gcccomplete iccserial icccomplete
 
 gccserial: main-serial.c $(COMMON_SRC)
-	$(GCC) -o $(GCC_SERIAL_EXE) main-serial.c $(COMMON_SRC) -lm
+	$(GCC) -fopenmp main-serial.c $(COMMON_SRC) -o $(GCC_SERIAL_EXE) -lm
 
 gcccomplete: main-mpi.c $(COMMON_SRC)
-	$(MPICC) -o $(GCC_COMPLETE_EXE) main-mpi.c $(COMMON_SRC) -lm
+	$(MPICC) -fopenmp main-mpi.c $(COMMON_SRC) -o $(GCC_COMPLETE_EXE) -lm
 
 iccserial: main-serial.c $(COMMON_SRC)
-	$(ICC) -o $(ICC_SERIAL_EXE) main-serial.c $(COMMON_SRC) -lm
+	$(ICC) -qopenmp main-serial.c $(COMMON_SRC) -o $(ICC_SERIAL_EXE) -lm
 
 icccomplete: main-mpi.c $(COMMON_SRC)
-	$(MPIICC) -o $(ICC_COMPLETE_EXE) main-mpi.c $(COMMON_SRC) -lm
+	$(MPIICC) -qopenmp main-mpi.c $(COMMON_SRC) -o $(ICC_COMPLETE_EXE) -lm
 
 # Clean rule
 clean:

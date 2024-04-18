@@ -17,16 +17,16 @@ ICC_COMPLETE_EXE = heat-complete-icc
 all: gccserial gcccomplete iccserial icccomplete
 
 gccserial: main-serial.c $(COMMON_SRC)
-	$(GCC) -o $(GCC_SERIAL_EXE) main-serial.c $(COMMON_SRC)
+	$(GCC) -o $(GCC_SERIAL_EXE) main-serial.c $(COMMON_SRC) -lm
 
 gcccomplete: main-mpi.c $(COMMON_SRC)
-	$(MPICC) -o $(GCC_COMPLETE_EXE) main-mpi.c $(COMMON_SRC)
+	$(MPICC) -o $(GCC_COMPLETE_EXE) main-mpi.c $(COMMON_SRC) -lm
 
 iccserial: main-serial.c $(COMMON_SRC)
-	$(ICC) -o $(ICC_SERIAL_EXE) main-serial.c $(COMMON_SRC)
+	$(ICC) -o $(ICC_SERIAL_EXE) main-serial.c $(COMMON_SRC) -lm
 
 icccomplete: main-mpi.c $(COMMON_SRC)
-	$(MPIICC) -o $(ICC_COMPLETE_EXE) main-mpi.c $(COMMON_SRC)
+	$(MPIICC) -o $(ICC_COMPLETE_EXE) main-mpi.c $(COMMON_SRC) -lm
 
 # Clean rule
 clean:

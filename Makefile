@@ -1,8 +1,8 @@
 # Compiler definitions
-GCC = gcc
-ICC = icc
-MPICC = mpicc
-MPIICC = mpiicc
+GCC = gcc -std=c11
+ICC = icc -std=c11
+MPICC = mpicc -std=c11
+MPIICC = mpiicc -std=c11
 
 # Common source files
 COMMON_SRC = heat.c file-reader.c

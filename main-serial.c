@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "file-reader.c"
-#include "heat.c"
+#include "file-reader.h"
+#include "heat.h"
 
 void printArray(double* array, int length) {
     for (int i = 0; i < length; i++) {
@@ -22,7 +22,5 @@ int main() {
     for (int i = 0; i < radNum; i++) {
         printf("Radiator Temp: %.2f, Center Temp: %.2f\n", radTemps[i], finalTemperatures[i]);
     }
-
-    free(finalTemperatures);
     return 0;
 }

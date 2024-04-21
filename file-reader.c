@@ -14,11 +14,6 @@
 
 /*If there are any issues with this code, please contact: h.j.forbes@liverpool.ac.uk*/
 
-
-int read_dims(char *filename);
-double *read_array(char *filename, int numOfValues);
-void *write_to_output_file(char *filename, double *output, int numOfValues);
-
 /*Gets the number of the radiator temperatures in the file. Returns as a single integer*/
 int read_dims(char *filename) {
     FILE *file = fopen(filename,"r");

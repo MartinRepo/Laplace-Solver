@@ -6,7 +6,7 @@
 void update_temperatures(double **curr_t, double **next_t, int N) {
 #pragma omp parallel for default(none) shared(next_t, curr_t, N) collapse(2)
     for (int i = 1; i < N-1; i++) {
-        for (int j = 1; j < N - 1; j++) {
+        for (int j = 1; j < N-1; j++) {
             next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 4.0;
         }
     }
@@ -30,7 +30,7 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
         curr_t[i] = (double *)malloc(N * sizeof(double));
         next_t[i] = (double *)malloc(N * sizeof(double));
         for (int j = 0; j < N; j++) {
-            curr_t[i][j] = 20.0; // Initial temperature of the room
+            curr_t[i][j] = 10.0; // Initial temperature of the room
         }
     }
 

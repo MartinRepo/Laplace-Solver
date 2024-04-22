@@ -16,6 +16,6 @@
 
 echo '---Running ./heat-omp-gcc---'
 
-time ./heat-omp-gcc
+time ./heat-omp-gcc 10 20 ./COMP328_CA_DATA_FILES/input_10.dat ./COMP328_CA_DATA_FILES/outputDemo_10_10_20_.dat
 
 echo '---Ending ./heat-omp-gcc----'

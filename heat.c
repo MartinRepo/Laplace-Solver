@@ -5,22 +5,9 @@
 
 void update_temperatures(double **curr_t, double **next_t, int N) {
 #pragma omp parallel for default(none) shared(next_t, curr_t, N) collapse(2)
-//    for (int i = 1; i < N-1; i++) {
-//        for (int j = 1; j < N-1; j++) {
-//            next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 4.0;
-//        }
-//    }
-    for (int j = N-2; j >= 0; j--) {
-        for(int i = 0; i < N; i++) {
-            if (i == 0){
-                next_t[i][j] = (curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 3.0;
-            } else if (i == N-1){
-                next_t[i][j] = (curr_t[i - 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 3.0;
-            } else if (j == 0 && (i != N-1 || i != 1)){
-                next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j + 1]) / 3.0;
-            } else {
-                next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 4.0;
-            }
+    for (int i = 1; i < N-1; i++) {
+        for (int j = 1; j < N-1; j++) {
+            next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 4.0;
         }
     }
 }
@@ -38,18 +25,17 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
     double **curr_t = (double **)malloc(N * sizeof(double *));
     double **next_t = (double **)malloc(N * sizeof(double *));
 
-    for (int i = 0; i < N; i++) {
-        curr_t[i] = (double *)malloc(N * sizeof(double));
-        next_t[i] = (double *)malloc(N * sizeof(double));
-        for (int j = 0; j < N; j++) {
-            curr_t[i][j] = 10.0; // Initial temperature of the room
-        }
-    }
-
     int pointx = floor((N - 1) * 0.5);
     int pointy = floor((N - 1) * 0.5);
 
     for (int temp = 0; temp < numTemps; temp++) {
+        for (int i = 0; i < N; i++) {
+            curr_t[i] = (double *)malloc(N * sizeof(double));
+            next_t[i] = (double *)malloc(N * sizeof(double));
+            for (int j = 0; j < N; j++) {
+                curr_t[i][j] = 10.0; // Initial temperature of the room
+            }
+        }
         set_radiator(curr_t, N, radTemps[temp]);
 
         for (int iter = 0; iter < maxIter; iter++) {
@@ -58,14 +44,16 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
             double **temp_ptr = curr_t;
             curr_t = next_t;
             next_t = temp_ptr;
+            printf("%.2f ", curr_t[pointx][pointy]);
         }
+        printf("\n");
         results[temp] = curr_t[pointx][pointy];
+        for (int i = 0; i < N; i++) {
+            free(curr_t[i]);
+            free(next_t[i]);
+        }
     }
 
-    for (int i = 0; i < N; i++) {
-        free(curr_t[i]);
-        free(next_t[i]);
-    }
     free(curr_t);
     free(next_t);
 

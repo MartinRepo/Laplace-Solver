@@ -15,7 +15,8 @@
 
 
 echo '---Running ./heat-omp-gcc---'
-
+time ./heat-omp-gcc 5 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_5_5_20_.dat
+time ./heat-omp-gcc 10 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_5_10_20_.dat
+time ./heat-omp-gcc 5 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_10_5_20_.dat
 time ./heat-omp-gcc 10 20 ./COMP328_CA_DATA_FILES/input_10.dat ./COMP328_CA_DATA_FILES/outputDemo_10_10_20_.dat
-
 echo '---Ending ./heat-omp-gcc----'

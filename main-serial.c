@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     char *outputFileName = argv[4];
     int radNum = read_dims(inputFileName);
     printf("here is output %d\n", radNum);
-    double* radTemps = read_array("COMP328_CA_DATA_FILES/input_10.dat", radNum);
+    double* radTemps = read_array(inputFileName, radNum);
     double *finalTemperatures = get_final_temperatures(N, maxIter, radTemps, radNum);
     FILE *outfile = fopen(outputFileName, "w");
     if (!outfile) {

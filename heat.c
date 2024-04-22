@@ -10,17 +10,20 @@ void update_temperatures(double **curr_t, double **next_t, int N) {
 //            next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 4.0;
 //        }
 //    }
-    for (int j = N-2; j > 0; j--) {
-        for(int i = 0; i < N-1; i++) {
-            if(curr_t[i - 1][j] == 10 && curr_t[i + 1][j] == 10 && curr_t[i][j - 1] == 10 && curr_t[i][j + 1] == 10){
-                next_t[i][j] = 10;
-                continue;
+    for (int j = N-2; j >= 0; j--) {
+        for(int i = 0; i < N; i++) {
+            if (i == 0){
+                next_t[i][j] = (curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 3.0;
+            } else if (i == N-1){
+                next_t[i][j] = (curr_t[i - 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 3.0;
+            } else if (j == 0 && (i != N-1 || i != 1)){
+                next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j + 1]) / 3.0;
+            } else {
+                next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 4.0;
             }
-            next_t[i][j] = (curr_t[i - 1][j] + curr_t[i + 1][j] + curr_t[i][j - 1] + curr_t[i][j + 1]) / 4.0;
         }
     }
 }
-
 
 void set_radiator(double **t, int N, double temp) {
     int start = floor((N-1) * 0.3);

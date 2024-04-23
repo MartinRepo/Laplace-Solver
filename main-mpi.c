@@ -69,21 +69,7 @@ int main(int argc, char *argv[]) {
     MPI_Gatherv(subFinalTemperatures, recvcounts[world_rank], MPI_DOUBLE, finalTemperatures, recvcounts, displs, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
     if (world_rank == 0) {
-        FILE *outfile = fopen(outputFileName, "w");
-        if (!outfile) {
-            fprintf(stderr, "Could not open %s for writing\n", outputFileName);
-            free(radTemps);
-            free(finalTemperatures);
-            MPI_Finalize();
-            return 1;
-        }
-
-//        fprintf(outfile, "Final temperatures at the center of the room for different radiator temperatures:\n");
-        for (int i = 0; i < radNum; i++) {
-//            fprintf(outfile, "Radiator Temp: %.2f, Center Temp: %.2f\n", radTemps[i], finalTemperatures[i]);
-            fprintf(outfile, "%.7f\n", finalTemperatures[i]);
-        }
-        fclose(outfile);
+        write_to_output_file(outputFileName, finalTemperatures, radNum);
         free(radTemps);
         free(finalTemperatures);
     }

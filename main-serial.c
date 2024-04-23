@@ -16,17 +16,7 @@ int main(int argc, char *argv[]) {
     int radNum = read_dims(inputFileName);
     double* radTemps = read_array(inputFileName, radNum);
     double *finalTemperatures = get_final_temperatures(N, maxIter, radTemps, radNum);
-    FILE *outfile = fopen(outputFileName, "w");
-    if (!outfile) {
-        fprintf(stderr, "Could not open %s for writing\n", outputFileName);
-        return 1;
-    }
-
-//    fprintf(outfile, "Final temperatures at the center of the room for different radiator temperatures:\n");
-    for (int i = 0; i < radNum; i++) {
-        fprintf(outfile, "%.7f\n", finalTemperatures[i]);
-    }
-    fclose(outfile);
+    write_to_output_file(outputFileName, finalTemperatures, radNum);
     free(radTemps);
     free(finalTemperatures);
     return 0;

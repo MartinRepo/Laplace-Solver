@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Laplace Solver" targetName="iccserial" />
+      <config projectName="Laplace Solver" targetName="gcccomplete" />
+      <config projectName="Laplace Solver" targetName="icccomplete" />
+      <config projectName="Laplace Solver" targetName="all" />
+      <config projectName="Laplace Solver" targetName="gccserial" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4225cbb2-b300-4786-8364-27d6d283dd70" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MakefileLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Laplace Solver" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="Laplace Solver" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2fGxFFYDDykWsk5JIUgykHfGHqi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/Users/martin/Desktop/Year4/COMP328/Laplace Solver",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CPPToolchains",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="C/C++ File.main-serial.c">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Laplace Solver" TARGET_NAME="all" CONFIG_NAME="all" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gcccomplete" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Laplace Solver" TARGET_NAME="gcccomplete" CONFIG_NAME="gcccomplete" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gccserial" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Laplace Solver" TARGET_NAME="gccserial" CONFIG_NAME="gccserial" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="icccomplete" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Laplace Solver" TARGET_NAME="icccomplete" CONFIG_NAME="icccomplete" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="iccserial" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Laplace Solver" TARGET_NAME="iccserial" CONFIG_NAME="iccserial" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main-serial.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Laplace Solver" TARGET_NAME="main-serial.c" CONFIG_NAME="main-serial.c">
+      <option name="sourceFile" value="main-serial.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gcccomplete" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
+      <makefile filename="$PROJECT_DIR$/Makefile" target="gcccomplete" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.main-serial.c" />
+      <item itemvalue="Makefile Application.all" />
+      <item itemvalue="Makefile Application.gcccomplete" />
+      <item itemvalue="Makefile Application.gccserial" />
+      <item itemvalue="Makefile Application.icccomplete" />
+      <item itemvalue="Makefile Application.iccserial" />
+      <item itemvalue="Makefile Target.gcccomplete" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="C/C++ File.main-serial.c" />
+        <item itemvalue="Makefile Target.gcccomplete" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4225cbb2-b300-4786-8364-27d6d283dd70" name="Changes" comment="" />
+      <created>1713441110029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713441110029</updated>
+      <workItem from="1713441111197" duration="5875000" />
+      <workItem from="1713523646282" duration="547000" />
+      <workItem from="1713609329327" duration="10626000" />
+      <workItem from="1713700168687" duration="28337000" />
+    </task>
+    <task id="LOCAL-00001" summary="configure compiler version as c11">
+      <created>1713443102834</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713443102834</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add main">
+      <created>1713444637838</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713444637838</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test for serial computation">
+      <created>1713708759455</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713708759455</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test for serial computation">
+      <created>1713709376001</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713709376001</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix bug">
+      <created>1713709492405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713709492405</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add shell script">
+      <created>1713710611071</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713710611071</updated>
+    </task>
+    <task id="LOCAL-00007" summary="support pass params via command">
+      <created>1713778167666</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713778167666</updated>
+    </task>
+    <task id="LOCAL-00008" summary="support 4 output">
+      <created>1713781867836</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713781867836</updated>
+    </task>
+    <task id="LOCAL-00009" summary="change calculating method">
+      <created>1713783831945</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713783831945</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add logic to calculate temperature">
+      <created>1713790606578</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713790606578</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix bug about calculating">
+      <created>1713793295535</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713793295535</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix logic mistake">
+      <created>1713795526952</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713795526952</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add mpi computing">
+      <created>1713869116481</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713869116481</updated>
+    </task>
+    <task id="LOCAL-00014" summary="modify shell script">
+      <created>1713871323841</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713871323841</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="configure compiler version as c11" />
+    <MESSAGE value="add main" />
+    <MESSAGE value="test for serial computation" />
+    <MESSAGE value="fix bug" />
+    <MESSAGE value="add shell script" />
+    <MESSAGE value="support pass params via command" />
+    <MESSAGE value="support 4 output" />
+    <MESSAGE value="change calculating method" />
+    <MESSAGE value="add logic to calculate temperature" />
+    <MESSAGE value="fix bug about calculating" />
+    <MESSAGE value="fix logic mistake" />
+    <MESSAGE value="add mpi computing" />
+    <MESSAGE value="modify shell script" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify shell script" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

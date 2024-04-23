@@ -78,9 +78,10 @@ int main(int argc, char *argv[]) {
             return 1;
         }
 
-        fprintf(outfile, "Final temperatures at the center of the room for different radiator temperatures:\n");
+//        fprintf(outfile, "Final temperatures at the center of the room for different radiator temperatures:\n");
         for (int i = 0; i < radNum; i++) {
-            fprintf(outfile, "Radiator Temp: %.2f, Center Temp: %.2f\n", radTemps[i], finalTemperatures[i]);
+//            fprintf(outfile, "Radiator Temp: %.2f, Center Temp: %.2f\n", radTemps[i], finalTemperatures[i]);
+            fprintf(outfile, "%.7f\n", finalTemperatures[i]);
         }
         fclose(outfile);
         free(radTemps);

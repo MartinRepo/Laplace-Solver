@@ -19,4 +19,5 @@ time ./heat-omp-gcc 5 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_F
 time ./heat-omp-gcc 10 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_5_10_20.dat
 time ./heat-omp-gcc 5 10 ./COMP328_CA_DATA_FILES/input_10.dat ./COMP328_CA_DATA_FILES/outputDemo_10_5_10.dat
 time ./heat-omp-gcc 10 20 ./COMP328_CA_DATA_FILES/input_10.dat ./COMP328_CA_DATA_FILES/outputDemo_10_10_20.dat
+time mpirun -np 4 5 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_5_5_20.dat
 echo '---Ending ./heat-omp-gcc----'

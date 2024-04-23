@@ -14,7 +14,6 @@ int main(int argc, char *argv[]) {
     char *inputFileName = argv[3];
     char *outputFileName = argv[4];
     int radNum = read_dims(inputFileName);
-    printf("here is output %d\n", radNum);
     double* radTemps = read_array(inputFileName, radNum);
     double *finalTemperatures = get_final_temperatures(N, maxIter, radTemps, radNum);
     FILE *outfile = fopen(outputFileName, "w");

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include "file-reader.h"
-#include "heat.h"
+#include "file-reader.c"
+#include "heat.c"
 
 int main(int argc, char *argv[]) {
     MPI_Init(&argc, &argv);

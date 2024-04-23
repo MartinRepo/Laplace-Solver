@@ -15,9 +15,8 @@
 
 
 echo '---Running ./heat-omp-gcc---'
-time ./heat-omp-gcc 5 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_5_5_20.dat
-time ./heat-omp-gcc 10 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_5_10_20.dat
-time ./heat-omp-gcc 5 10 ./COMP328_CA_DATA_FILES/input_10.dat ./COMP328_CA_DATA_FILES/outputDemo_10_5_10.dat
-time ./heat-omp-gcc 10 20 ./COMP328_CA_DATA_FILES/input_10.dat ./COMP328_CA_DATA_FILES/outputDemo_10_10_20.dat
-time mpirun -np 4 5 20 ./COMP328_CA_DATA_FILES/input_5.dat ./COMP328_CA_DATA_FILES/outputDemo_5_5_20.dat
+time ./heat-omp-gcc 256 4096 ./COMP328_CA_DATA_FILES/input_1024.dat ./COMP328_CA_DATA_FILES/outputDemo_gcc_256_1024_4096.dat
+time ./heat-omp-icc 256 4096 ./COMP328_CA_DATA_FILES/input_1024.dat ./COMP328_CA_DATA_FILES/outputDemo_icc_256_1024_4096.dat
+time mpirun -np 4 ./heat-complete-gcc 256 4096 ./COMP328_CA_DATA_FILES/input_1024.dat ./COMP328_CA_DATA_FILES/outputDemo_mpicc_256_1024_4096.dat
+time mpirun -np 4 ./heat-complete-icc 256 4096 ./COMP328_CA_DATA_FILES/input_1024.dat ./COMP328_CA_DATA_FILES/outputDemo_mpiicc_256_1024_4096.dat
 echo '---Ending ./heat-omp-gcc----'

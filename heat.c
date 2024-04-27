@@ -21,6 +21,7 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
     int end = ceil((N-1) * 0.7);
 
     for (int temp = 0; temp < numTemps; temp++) {
+        int column = N-2;
         #pragma omp parallel for default(none) shared(t, N) collapse(3)
         for (int k = 0; k < 2; k++) {
             for (int i = 0; i < N; i++) {
@@ -38,11 +39,21 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
         int next = 1;
 
         for (int iter = 0; iter < maxIter; iter++) {
-            #pragma omp parallel for default(none) shared(t, curr, next, N, maxIter) collapse(2)
-            for (int i = 1; i < N-1; i++) {
-                for (int j = 1; j < N-1; j++) {
-                    t[next][i][j] = (t[curr][i - 1][j] + t[curr][i][j - 1] + t[curr][i + 1][j] + t[curr][i][j + 1]) / 4.0;
+            if (iter >= N-3) {
+                #pragma omp parallel for default(none) shared(t, curr, next, N, maxIter) collapse(2)
+                for (int i = 1; i < N-1; i++) {
+                    for (int j = 1; j < N-1; j++) {
+                        t[next][i][j] = (t[curr][i - 1][j] + t[curr][i][j - 1] + t[curr][i + 1][j] + t[curr][i][j + 1]) * 0.25;
+                    }
                 }
+            } else {
+                #pragma omp parallel for default(none) shared(t, curr, next, N, maxIter, column) collapse(2)
+                for(int col = column; col < N-1; col++) {
+                    for(int row = 1; row < N-1; row++) {
+                        t[next][row][col] = (t[curr][row - 1][col] + t[curr][row][col - 1] + t[curr][row + 1][col] + t[curr][row][col + 1]) * 0.25;
+                    }
+                }
+                column--;
             }
             int temp_idx = curr;
             curr = next;

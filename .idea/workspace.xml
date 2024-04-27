@@ -21,6 +21,7 @@
     <list default="true" id="4225cbb2-b300-4786-8364-27d6d283dd70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/heat.c" beforeDir="false" afterPath="$PROJECT_DIR$/heat.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heat.h" beforeDir="false" afterPath="$PROJECT_DIR$/heat.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +160,7 @@
       <workItem from="1713609329327" duration="10626000" />
       <workItem from="1713700168687" duration="31958000" />
       <workItem from="1714138143659" duration="3555000" />
-      <workItem from="1714167853811" duration="1617000" />
+      <workItem from="1714167853811" duration="10160000" />
     </task>
     <task id="LOCAL-00001" summary="configure compiler version as c11">
       <created>1713443102834</created>
@@ -280,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714142296360</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="optimise logic to reduce serial time">
+      <created>1714208579863</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714208579864</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +311,8 @@
     <MESSAGE value="modify shell script, test all kinds of threads" />
     <MESSAGE value="improve performance for sequential" />
     <MESSAGE value="correct logic of heat.c" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct logic of heat.c" />
+    <MESSAGE value="optimise logic to reduce serial time" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimise logic to reduce serial time" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

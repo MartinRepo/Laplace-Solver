@@ -28,11 +28,15 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
     int pointx = floor((N - 1) * 0.5);
     int pointy = floor((N - 1) * 0.5);
 
+    for (int k = 0; k < 2; k++) {
+        t[k] = (double **)malloc(N * sizeof(double *));
+        for (int i = 0; i < N; i++) {
+            t[k][i] = (double *)malloc(N * sizeof(double));
+        }
+    }
     for (int temp = 0; temp < numTemps; temp++) {
         for (int k = 0; k < 2; k++) {
-            t[k] = (double **)malloc(N * sizeof(double *));
             for (int i = 0; i < N; i++) {
-                t[k][i] = (double *)malloc(N * sizeof(double));
                 for (int j = 0; j < N; j++) {
                     t[k][i][j] = 10.0;
                 }

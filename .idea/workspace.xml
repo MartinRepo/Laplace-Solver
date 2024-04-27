@@ -158,7 +158,8 @@
       <workItem from="1713523646282" duration="547000" />
       <workItem from="1713609329327" duration="10626000" />
       <workItem from="1713700168687" duration="31958000" />
-      <workItem from="1714138143659" duration="2760000" />
+      <workItem from="1714138143659" duration="3555000" />
+      <workItem from="1714167853811" duration="1617000" />
     </task>
     <task id="LOCAL-00001" summary="configure compiler version as c11">
       <created>1713443102834</created>
@@ -272,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714139885825</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="correct logic of heat.c">
+      <created>1714142296360</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714142296360</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +302,8 @@
     <MESSAGE value="modify shell script" />
     <MESSAGE value="modify shell script, test all kinds of threads" />
     <MESSAGE value="improve performance for sequential" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve performance for sequential" />
+    <MESSAGE value="correct logic of heat.c" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct logic of heat.c" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

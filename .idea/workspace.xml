@@ -159,7 +159,7 @@
       <workItem from="1713609329327" duration="10626000" />
       <workItem from="1713700168687" duration="31958000" />
       <workItem from="1714138143659" duration="3555000" />
-      <workItem from="1714167853811" duration="11858000" />
+      <workItem from="1714167853811" duration="14250000" />
     </task>
     <task id="LOCAL-00001" summary="configure compiler version as c11">
       <created>1713443102834</created>
@@ -294,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714222521181</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="optimise">
+      <created>1714224713420</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714224713420</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +326,8 @@
     <MESSAGE value="correct logic of heat.c" />
     <MESSAGE value="optimise logic to reduce serial time" />
     <MESSAGE value="optimise logic and add timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimise logic and add timer" />
+    <MESSAGE value="optimise" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimise" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

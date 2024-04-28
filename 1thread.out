@@ -1,0 +1,10 @@
+---Running ./heat-omp-icc---
+
+File opened, writing dims
+
+Writing output data
+
+real    9m56.778s
+user    9m55.361s
+sys     0m0.007s
+---Ending ./heat-omp-icc----

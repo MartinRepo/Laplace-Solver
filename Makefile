@@ -14,7 +14,11 @@ ICC_SERIAL_EXE = heat-omp-icc
 ICC_COMPLETE_EXE = heat-complete-icc
 
 # Compilation rules
-all: gccserial gcccomplete iccserial icccomplete
+all: loadCompilers gccserial gcccomplete iccserial icccomplete
+
+loadCompilers:
+	module load mpi/intel mpi/intel-mpi/2019u5/bin
+	module load compilers/intel
 
 gccserial: main-serial.c $(COMMON_SRC)
 	$(GCC) -fopenmp main-serial.c $(COMMON_SRC) -o $(GCC_SERIAL_EXE) -lm

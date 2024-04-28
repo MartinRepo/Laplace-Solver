@@ -16,6 +16,7 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
 
     for (int temp = 0; temp < numTemps; temp++) {
         // reset matrix's temperature
+        #pragma omp parallel for collapse(3)
         for (int k = 0; k < 2; k++) {
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
@@ -34,29 +35,27 @@ double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemp
 
         int curr = 0;
         int next = 1;
-        double maxDelta;
         int column = N-2;
         // start iteration...
         for (int iter = 0; iter < maxIter; iter++) {
             if (iter >= N-3) {
+                #pragma omp parallel for collapse(2) shared(next, curr)
                 for (int i = 1; i < N-1; i++) {
                     for (int j = 1; j < N-1; j++) {
                         double newTemp = (t[curr][i - 1][j] + t[curr][i][j - 1] + t[curr][i + 1][j] + t[curr][i][j + 1]) * 0.25;
-                        maxDelta = fmax(maxDelta, fabs(newTemp - t[curr][i][j]));
                         t[next][i][j] = newTemp;
                     }
                 }
             } else {
+                #pragma omp parallel for collapse(2) shared(next, curr)
                 for(int col = column; col < N-1; col++) {
                     for(int row = 1; row < N-1; row++) {
                         double newTemp = (t[curr][row - 1][col] + t[curr][row][col - 1] + t[curr][row + 1][col] + t[curr][row][col + 1]) * 0.25;
-                        maxDelta = fmax(maxDelta, fabs(newTemp - t[curr][row][col]));
                         t[next][row][col] = newTemp;
                     }
                 }
                 column--;
             }
-            if (maxDelta < 0.001) break;
             int temp_idx = curr;
             curr = next;
             next = temp_idx;

@@ -17,7 +17,7 @@
 echo '---Running ./heat-omp-icc---'
 #export OMP_NUM_THREADS=1
 #time ./heat-omp-icc 256 4096 ./COMP328_CA_DATA_FILES/input_1024.dat ./COMP328_CA_DATA_FILES/outputDemo_icc_256_1024_4096.dat
-export OMP_NUM_THREADS=2
+export OMP_NUM_THREADS=32
 time ./heat-omp-icc 256 4096 ./COMP328_CA_DATA_FILES/input_1024.dat ./COMP328_CA_DATA_FILES/outputDemo_icc_256_1024_4096.dat
 #export OMP_NUM_THREADS=4
 #time ./heat-omp-icc 256 4096 ./COMP328_CA_DATA_FILES/input_1024.dat ./COMP328_CA_DATA_FILES/outputDemo_icc_256_1024_4096.dat

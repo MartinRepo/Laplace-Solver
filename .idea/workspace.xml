@@ -19,10 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4225cbb2-b300-4786-8364-27d6d283dd70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/1thread.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_report.sh" beforeDir="false" afterPath="$PROJECT_DIR$/get_report.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/heat.c" beforeDir="false" afterPath="$PROJECT_DIR$/heat.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +159,7 @@
       <workItem from="1713609329327" duration="10626000" />
       <workItem from="1713700168687" duration="31958000" />
       <workItem from="1714138143659" duration="3555000" />
-      <workItem from="1714167853811" duration="28891000" />
+      <workItem from="1714167853811" duration="32051000" />
     </task>
     <task id="LOCAL-00001" summary="configure compiler version as c11">
       <created>1713443102834</created>
@@ -325,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714316003062</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="optimize and add some comment.">
+      <created>1714334956945</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1714334956945</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

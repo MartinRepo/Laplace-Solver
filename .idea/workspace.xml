@@ -19,8 +19,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4225cbb2-b300-4786-8364-27d6d283dd70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/get_report_complete.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heat.c" beforeDir="false" afterPath="$PROJECT_DIR$/heat.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-reader.c" beforeDir="false" afterPath="$PROJECT_DIR$/file-reader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-reader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_report.sh" beforeDir="false" afterPath="$PROJECT_DIR$/get_report_serial.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heat.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-mpi.c" beforeDir="false" afterPath="$PROJECT_DIR$/main-mpi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main-serial.c" beforeDir="false" afterPath="$PROJECT_DIR$/main-serial.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

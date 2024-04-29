@@ -14,7 +14,7 @@ ICC_SERIAL_EXE = heat-omp-icc
 ICC_COMPLETE_EXE = heat-complete-icc
 
 # Compilation rules
-all: loadCompilers gccserial gcccomplete iccserial icccomplete
+all: gccserial gcccomplete iccserial icccomplete
 
 gccserial: main-serial.c $(COMMON_SRC)
 	$(GCC) -fopenmp main-serial.c $(COMMON_SRC) -o $(GCC_SERIAL_EXE) -lm

@@ -14,25 +14,30 @@
 
 /*If there are any issues with this code, please contact: h.j.forbes@liverpool.ac.uk*/
 
+
+int read_dims(char *filename);
+double *read_array(char *filename, int numOfValues);
+void *write_to_output_file(char *filename, double *output, int numOfValues);
+
 /*Gets the number of the radiator temperatures in the file. Returns as a single integer*/
 int read_dims(char *filename) {
     FILE *file = fopen(filename,"r");
     int i;
-    
+
     if(file == NULL) {
         printf("Unable to open file: %s", filename);
         return -1; //-1 means error
     }
 
     char firstline[500];
-    
+
     if(fgets(firstline, 500, file) == NULL){
         perror("Error reading file");
         return -1; //error
     }
-    
+
     int line_length = strlen(firstline);
-    
+
     int numOfValues;
 
     const char s[2] = " ";
@@ -52,24 +57,24 @@ int read_dims(char *filename) {
 double *read_array(char *filename, int numOfValues) {
     FILE *file = fopen(filename,"r");
     int i;
-    
+
     if(file == NULL) {
         perror("Unable to open file: %s");
         return NULL; //error
     }
 
     char firstline[500];
-    
+
     if(fgets(firstline, 500, file) == NULL){
         perror("Error reading file");
         return NULL; //error
     }
 
-    //Ignore first line and move on since first line contains 
-    //header information and we already have that. 
+    //Ignore first line and move on since first line contains
+    //header information and we already have that.
 
     double *one_d = malloc(sizeof(double) * numOfValues);
-    
+
     for(i=0; i<numOfValues; i++) {
         if(fscanf(file, "%lf", &one_d[i]) == EOF){
             perror("Error reading file");
@@ -84,10 +89,10 @@ double *read_array(char *filename, int numOfValues) {
 void *write_to_output_file(char *filename, double *output, int numOfValues){
     FILE *file = fopen(filename,"w");
     int i;
-    
+
     printf("\nFile opened, writing dims\n");
     fprintf(file, "%d \n", numOfValues);
-      
+
     printf("\nWriting output data\n");
     for(i=0; i < numOfValues; i++) {
         fprintf(file, "%.7lf ", output[i]);

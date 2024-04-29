@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "file-reader.h"
-#include "heat.h"
+
+double *get_final_temperatures(int N, int maxIter, double *radTemps, int numTemps);
+int read_dims(char *filename);
+double *read_array(char *filename, int numOfValues);
+void *write_to_output_file(char *filename, double *output, int numOfValues);
 
 int main(int argc, char *argv[]) {
     if (argc != 5) {
